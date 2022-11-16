@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Roboto+Mono:wght@200&display=swap');
+
+body { background-color: rgb(10, 9, 9);
+    font-family: 'Roboto Mono', monospace;;
+    font-size: 25px;
+    font-weight: bold;
+}  
+
+/*TYPOGRAPHY of HOME PAGE; CONTACT FORM PAGE and ABOUT US PAGE*/
+
+
+header {
+    color: whitesmoke;
+    border: 1px solid  #f4f3f0;
+    text-align: left;
+    font-family: 'Fragment Mono', monospace;
+    font-size: 60px;
+    font-weight: normal;
+    background-color:#121110;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+h1,h2 {
+    color: whitesmoke;
+    text-align: left;
+    font-family: 'Fragment Mono', monospace;
+    font-size: 40px;
+    font-weight: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+h3 {
+    color: whitesmoke;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+.description {color: whitesmoke;
+    text-align: left;
+    font-family: 'Fragment Mono', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+
+}
+
+label {
+    color: whitesmoke;
+    text-align: left;
+    font-family: 'Fragment Mono', monospace;
+    font-size: 30px;
+    font-weight: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+
+}
+
+input {
+    font-family: 'Fragment Mono', monospace;
+    font-size: 15px;
+    padding: 10px 50px;
+    margin: 8px 4px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+  }
+
+  input:hover {
+    opacity: 0.5;
+  }
+
+/*Navigation HOME PAGE*/
+
+.container {
+    border: 1px solid  #f4f3f0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+/*Mobile navigation HOME PAGE & */
+
+.gridcontainer {
+    height: auto;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid  #f4f3f0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 200px 1fr 40px;
+    grid-template-areas: 
+    "welcome"
+    "main"
+    "review"
+    "footer";
+    gap: 40px; 
+}
+
+.welcome, .main, .footer, .review{
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.welcome{
+    background-color: rgb(8, 7, 6);
+    grid-area: welcome;
+}
+
+.text1{
+    background-color: rgb(18, 17, 15);
+    grid-area: welcome;
+    padding: 50px;
+}
+
+.aligncenter{
+    text-align: center;
+}
+
+.text2{
+    background-color: rgb(19, 16, 8);
+    grid-area: main;
+    padding: 50px;
+}
+
+.reviewer1{
+    background-color: rgb(21, 14, 12);
+    grid-area: review;
+    padding: 50px;
+}
+
+.reviewer2{
+    background-color: rgb(21, 14, 12);
+    grid-area: review;
+    padding: 50px;
+}
+
+.reviewer3{
+    background-color: rgb(21, 14, 12);
+    grid-area: review;
+    padding: 50px;
+}
+
+.main {
+    background-color: rgb(17, 19, 18);
+    grid-area: main;
+}
+
+.footer {
+    background-color: rgb(18, 17, 2);
+    grid-area: footer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.review {
+    background-color: rgb(18, 10, 8);
+    grid-area: review;
+}
+
+
+
+/*Navigation ABOUT US PAGE*/
+
+
+.aboutcontainer {
+    border: 1px solid  #f4f3f0;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.ceocoo, .headchef, .marketingsales {
+    padding: 15px;
+    font-size: 30px;
+    color: white;
+    text-align: left;
+}
+
+
+
+
+
+/*Tablet & Desktop navigation HOME PAGE*/
+
+@media (min-width: 768px) {                                                          
+    .gridcontainer {
+        grid-template-columns: 400px 1fr ;
+        grid-template-rows: 1fr 1fr 80px ;
+        grid-template-areas: 
+        "welcome review"
+        "main review"
+        "footer footer";
+    }                                                                          
+}    
+
+@media screen and (min-width: 1280px) {  
+    .gridcontainer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 40px ;
+        grid-template-areas: 
+        "welcome main review"
+        "footer footer footer";
+    }
+
+}   
